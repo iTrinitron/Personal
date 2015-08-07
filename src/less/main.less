@@ -1,8 +1,29 @@
-@header-height: 125px;
-@bg-color-2: black;
+@header-height: 225px;
 @content-width: 1080px;
 
-@title-color: #F38730;
+@bg-color-1: #000000;
+@bg-color-2: #212121;
+@bg-color-3: #303030;
+@bg-color-4: #424242;
+@bg-color-5: #555555;
+
+@main-color: #F38730;
+//@main-color: #F13035;
+@white-color: rgba(255,255,255,1);
+@white-secondary-color: rgba(255,255,255,0.7);
+
+//Box Shadow Z-dex
+@z-1: 0 2px 5px 0 rgba(0,0,0,.26);
+@z-2: 0 8px 17px 0 rgba(0,0,0,.2);
+@z-3: 0 12px 15px 0 rgba(0,0,0,.24);
+@z-4: 0 16px 28px 0 rgba(0,0,0,.22);
+@z-5: 0 27px 24px 0 rgba(0,0,0,.2);
+
+@z-t-1: 0 2px 10px 0 rgba(0,0,0,.16);
+@z-t-2: 0 6px 20px 0 rgba(0,0,0,.19);
+@z-t-3: 0 17px 50px 0 rgba(0,0,0,.19);
+@z-t-4: 0 25px 55px 0 rgba(0,0,0,.21);
+@z-t-5: 0 40px 77px 0 rgba(0,0,0,.22);
 
 body {
     background: @bg-color-2;
@@ -15,30 +36,31 @@ body {
 }
 
 .header {
-    background: #FFB377;
-        height: @header-height;
+    height: @header-height;
+    text-align: center;
+    color: #F38730;
+    background: @bg-color-1;
+    box-shadow: @z-1;
+        
+    .name {
+        padding-top: 60px;
+        font-size: 60px;
+        color: @main-color;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .icons {
         text-align: center;
-        color: #F38730;
-        
-        .name {
-            padding-top: 15px;
-            font-size: 60px;
-            color: black;
-            font-family: 'Lato', sans-serif;
-        }
-        
-        .icons {
-            text-align: center;
-            a {
-                font-size: 25px;
-                margin-left: 10px;
-                color: black;
+        a {
+            font-size: 25px;
+            margin-left: 10px;
+            color: @white-color;
         }
             
     }
 }
 .navbar-container {
-    background: @bg-color-2;
+    box-shadow: @z-1;
     .navbar {
         width: @content-width + 300;
         margin-left: auto;
@@ -50,13 +72,13 @@ body {
         .link {
             background: @bg-color-2;
             .name {
-                color: #F38730;
+                color: @main-color;
                 font-family: 'Lato', sans-serif;
                 font-size: 30px;
                 text-transform: uppercase;
             }
             .desc {
-                color: white;
+                color: @white-color;
                 margin-top: 10px;
                 padding-left: 15%;
                 padding-right: 15%;
@@ -81,7 +103,9 @@ body {
     //border-top: 0px;
     //border-bottom: 0px;
     ///background: #FFD177;
-    background: #FFB377;
+    background: @bg-color-3;
+    padding-bottom: 15px;
+    
     
     .container {
         width: @content-width;
@@ -89,13 +113,10 @@ body {
         margin-right: auto;
 
         .content {
-            border: 5px solid #FFB377;
-            margin-top: 15px;
             margin-left: 15px;
             margin-right: 15px;
             padding-top: 25px;
             padding-bottom: 25px;
-            background: #FFD177;
 
 
             .projects {
@@ -104,18 +125,20 @@ body {
                 padding-right: 1%;
 
                 .project {
+                    box-shadow: @z-2;
                     height: 250px;
+                    
                     .name {
                         height: 10%;
                         text-transform: uppercase;
-                        background: #D20005;
                         line-height: 25px;
-                        color: @title-color;
+                        color: @main-color;
+                        background: @bg-color-4;
                     }
                     img {
                         height: 90%;
                     }
-                    background: #A80004;
+                    background: @bg-color-4;
                     margin-left: 2%;
                     text-align: center;
                     height: inherit;
@@ -123,31 +146,43 @@ body {
                     float: left;
                     position: relative;
                 }
+                .project:hover {
+                    box-shadow: @z-3;
+                }
             }
             .work {
-                margin-top: 25px;
+                margin-top: 45px;
 
                 .company {
+                    background: @bg-color-4;
+                    box-shadow: @z-2;
+                    padding: 2px;
                     width: 70%;
                     margin-left: 18%;
                     margin-right: 12%;
                     text-align: center;
-                    height: 100px;
                     .icon {
-                        background: white;
+                        height: 100%;
                         min-height: 1px;
-                        height: 40px;
                         width: 20%;
                         float: left;
+                        border: 1px solid black;
+                        img {
+                            width: 100%;
+                            display: none;
+                        }
                     }
                     .text {
-                        float: right;
+                        padding: 8px;
+                        float: left;
                         width: 74%;
-                        margin-left: 6%;
+                        margin-left: 3%;
                         text-align: left;
                         font-size: 14px;
+                        color: @white-color;
                         .name {
                             font-size: 20px;
+                            color: @main-color;
                             .date {
                                 margin-left: 5px;
                                 font-size: 15px;
@@ -155,32 +190,49 @@ body {
                             }
                         }
                     }
-                    margin-top: 10px;
+                    margin-top: 15px;
                 }
             }
             .education {
-                margin-top: 20px;
+                margin-top: 40px;
                 .school {
+                    background: @bg-color-4;
+                    box-shadow: @z-2;
+                    padding: 2px;
                     width: 70%;
                     margin-left: 18%;
                     margin-right: 12%;
                     text-align: center;
-                    height: 100px;
                     .icon {
-                        background: black;
+                        height: 100%;
                         min-height: 1px;
-                        height: 40px;
                         width: 20%;
                         float: left;
+                        border: 1px solid black;
+                        img {
+                            width: 100%;
+                            display: none;
+                        }
                     }
-                    text-align: center; 
-                    .name {
-                        font-size: 20px;
-                        float: right;
+                    .text {
+                        padding: 8px;
+                        float: left;
                         width: 74%;
-                        margin-left: 6%;
+                        margin-left: 3%;
                         text-align: left;
+                        font-size: 14px;
+                        color: @white-color;
+                        .name {
+                            font-size: 20px;
+                            color: @main-color;
+                            .date {
+                                margin-left: 5px;
+                                font-size: 15px;
+                                line-height: 20px;
+                            }
+                        }
                     }
+                    margin-top: 15px;
                 } 
             }
         }
@@ -188,7 +240,8 @@ body {
 }
 
 .footer {
-    background: black;
+    background: @bg-color-1;
+    box-shadow: @z-t-1;
     height: 40px;
 }
 

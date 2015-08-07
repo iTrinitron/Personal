@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head ng-app="StarterApp">
 	  <meta charset="utf-8"/>
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 	  <title>Michael Chin</title>
 	  
-          <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
             <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
             
             <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
           
+            
 	  <link rel="stylesheet" href="css/main.css"/>
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	</head>
-	<body>
+	
+        
+        </head>
+	<body ng-controller="AppCtrl">
             <div class="header">
                     <div class="name">Michael Chin</div>
                     <div class="icons">
@@ -48,33 +51,35 @@
                         <div class="projects">
                             <div class="project">
                                 <div class="name">Dungeons & Data</div>
-                                <img src="img/pikachu.png"/>
                             </div>
                             <div class="project">
                                 <div class="name">Dungeons & Data</div>
-                                <img src="img/pikachu.png"/>
                             </div>
                             <div class="project">
                                 <div class="name">Dungeons & Data</div>
-                                <img src="img/pikachu.png"/>
                             </div>
                             <div class="clear"></div>
                         </div>
                         <div class="work">
                             <div class="company">
-                                <div class="icon"></div>
+                                <div class="icon">
+                                    <img src="img/company/maxsam.png">
+                                </div>
                                 <div class="text">
                                     <div class="name">
-                                        Harebrained Schemes
+                                        Maxsam Partners
                                         <span class="date">(Mar 2015 - Jul 2016)</span>
                                     </div>
                                     <div class="desc">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                                     </div>
                                 </div>
+                                <div class="clear"></div>
                             </div>
                             <div class="company">
-                                <div class="icon"></div>
+                                <div class="icon" >
+                                    <img src="img/company/blizz.svg.png" >
+                                </div>
                                 <div class="text">
                                     <div class="name">
                                         Blizzard Entertainment
@@ -84,9 +89,27 @@
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                                     </div>
                                 </div>
+                                <div class="clear"></div>
                             </div>
                             <div class="company">
-                                <div class="icon"></div>
+                                <div class="icon">
+                                    <img src="img/company/ucsd.png" style="width: 70%;">
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        UCSD CSE Department
+                                        <span class="date">(Mar 2015 - Jul 2016)</span>
+                                    </div>
+                                    <div class="desc">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="company">
+                                <div class="icon">
+                                    <img src="img/company/hbs.png">
+                                </div>
                                 <div class="text">
                                     <div class="name">
                                         Harebrained Schemes
@@ -96,26 +119,39 @@
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                                     </div>
                                 </div>
-                            </div>
-                            <div class="company">
-                                <div class="icon"></div>
-                                <div class="text">
-                                    <div class="name">
-                                        Harebrained Schemes
-                                        <span class="date">(Mar 2015 - Jul 2016)</span>
-                                    </div>
-                                    <div class="desc">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
                         <div class="education">
                             <div class="school">
-                                <div class="name">University of California, San Diego</div>
+                                <div class="icon">
+                                    <img src="img/company/hbs.png">
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        University of California, San Diego
+                                        <span class="date">2016</span>
+                                    </div>
+                                    <div class="desc">
+                                        Computer Science Major | Business Minor
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                             <div class="school">
-                                <div class="name">Seattle Academy of Arts and Sciences</div>
+                                <div class="icon">
+                                    <img src="img/company/hbs.png">
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        Seattle Academy of Arts and Sciences
+                                        <span class="date">2012</span>
+                                    </div>
+                                    <div class="desc">
+                                        
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
                     </div>
@@ -123,5 +159,7 @@
             </div>
             <div class="footer">
             </div>
+            
+            <script src="js/main.js"></script>
 	</body>
 </html>

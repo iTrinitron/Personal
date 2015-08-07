@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: #212121;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -7,15 +7,16 @@ body {
   color: black;
 }
 .header {
-  background: #FFB377;
-  height: 125px;
+  height: 225px;
   text-align: center;
   color: #F38730;
+  background: #000000;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 .header .name {
-  padding-top: 15px;
+  padding-top: 60px;
   font-size: 60px;
-  color: black;
+  color: #f38730;
   font-family: 'Lato', sans-serif;
 }
 .header .icons {
@@ -24,10 +25,10 @@ body {
 .header .icons a {
   font-size: 25px;
   margin-left: 10px;
-  color: black;
+  color: #ffffff;
 }
 .navbar-container {
-  background: black;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 .navbar-container .navbar {
   width: 1380px;
@@ -37,20 +38,20 @@ body {
   padding-bottom: 25px;
 }
 .navbar-container .navbar .link {
-  background: black;
+  background: #212121;
   width: 50%;
   float: left;
   position: relative;
   text-align: center;
 }
 .navbar-container .navbar .link .name {
-  color: #F38730;
+  color: #f38730;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
 }
 .navbar-container .navbar .link .desc {
-  color: white;
+  color: #ffffff;
   margin-top: 10px;
   padding-left: 15%;
   padding-right: 15%;
@@ -59,7 +60,8 @@ body {
   opacity: 0.4;
 }
 .container-container {
-  background: #FFB377;
+  background: #303030;
+  padding-bottom: 15px;
 }
 .container-container .container {
   width: 1080px;
@@ -67,13 +69,10 @@ body {
   margin-right: auto;
 }
 .container-container .container .content {
-  border: 5px solid #FFB377;
-  margin-top: 15px;
   margin-left: 15px;
   margin-right: 15px;
   padding-top: 25px;
   padding-bottom: 25px;
-  background: #FFD177;
 }
 .container-container .container .content .projects {
   height: 250px;
@@ -81,8 +80,9 @@ body {
   padding-right: 1%;
 }
 .container-container .container .content .projects .project {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   height: 250px;
-  background: #A80004;
+  background: #424242;
   margin-left: 2%;
   text-align: center;
   height: inherit;
@@ -93,40 +93,52 @@ body {
 .container-container .container .content .projects .project .name {
   height: 10%;
   text-transform: uppercase;
-  background: #D20005;
   line-height: 25px;
   color: #f38730;
+  background: #424242;
 }
 .container-container .container .content .projects .project img {
   height: 90%;
 }
+.container-container .container .content .projects .project:hover {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
 .container-container .container .content .work {
-  margin-top: 25px;
+  margin-top: 45px;
 }
 .container-container .container .content .work .company {
+  background: #424242;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  padding: 2px;
   width: 70%;
   margin-left: 18%;
   margin-right: 12%;
   text-align: center;
-  height: 100px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .container-container .container .content .work .company .icon {
-  background: white;
+  height: 100%;
   min-height: 1px;
-  height: 40px;
   width: 20%;
   float: left;
+  border: 1px solid black;
+}
+.container-container .container .content .work .company .icon img {
+  width: 100%;
+  display: none;
 }
 .container-container .container .content .work .company .text {
-  float: right;
+  padding: 8px;
+  float: left;
   width: 74%;
-  margin-left: 6%;
+  margin-left: 3%;
   text-align: left;
   font-size: 14px;
+  color: #ffffff;
 }
 .container-container .container .content .work .company .text .name {
   font-size: 20px;
+  color: #f38730;
 }
 .container-container .container .content .work .company .text .name .date {
   margin-left: 5px;
@@ -134,31 +146,50 @@ body {
   line-height: 20px;
 }
 .container-container .container .content .education {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .container-container .container .content .education .school {
+  background: #424242;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  padding: 2px;
   width: 70%;
   margin-left: 18%;
   margin-right: 12%;
-  height: 100px;
   text-align: center;
+  margin-top: 15px;
 }
 .container-container .container .content .education .school .icon {
-  background: black;
+  height: 100%;
   min-height: 1px;
-  height: 40px;
   width: 20%;
   float: left;
+  border: 1px solid black;
 }
-.container-container .container .content .education .school .name {
-  font-size: 20px;
-  float: right;
+.container-container .container .content .education .school .icon img {
+  width: 100%;
+  display: none;
+}
+.container-container .container .content .education .school .text {
+  padding: 8px;
+  float: left;
   width: 74%;
-  margin-left: 6%;
+  margin-left: 3%;
   text-align: left;
+  font-size: 14px;
+  color: #ffffff;
+}
+.container-container .container .content .education .school .text .name {
+  font-size: 20px;
+  color: #f38730;
+}
+.container-container .container .content .education .school .text .name .date {
+  margin-left: 5px;
+  font-size: 15px;
+  line-height: 20px;
 }
 .footer {
-  background: black;
+  background: #000000;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   height: 40px;
 }
 .clear {
