@@ -1,0 +1,197 @@
+@header-height: 125px;
+@bg-color-2: black;
+@content-width: 1080px;
+
+@title-color: #F38730;
+
+body {
+    background: @bg-color-2;
+    margin: 0px;
+    padding: 0px;
+    
+    font-size: 16px;
+    font-family: Raleway;
+    color: black;
+}
+
+.header {
+    background: #FFB377;
+        height: @header-height;
+        text-align: center;
+        color: #F38730;
+        
+        .name {
+            padding-top: 15px;
+            font-size: 60px;
+            color: black;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .icons {
+            text-align: center;
+            a {
+                font-size: 25px;
+                margin-left: 10px;
+                color: black;
+        }
+            
+    }
+}
+.navbar-container {
+    background: @bg-color-2;
+    .navbar {
+        width: @content-width + 300;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        .link {
+            background: @bg-color-2;
+            .name {
+                color: #F38730;
+                font-family: 'Lato', sans-serif;
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+            .desc {
+                color: white;
+                margin-top: 10px;
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+            width: 50%;
+            float: left;
+            position: relative;
+            text-align: center;
+        }
+        
+        .link:hover {
+            opacity: 0.4;
+        }
+        
+        .arrow {
+            
+        }
+    }
+}
+.container-container {
+    //border: 15px solid #FFB377;
+    //border-top: 0px;
+    //border-bottom: 0px;
+    ///background: #FFD177;
+    background: #FFB377;
+    
+    .container {
+        width: @content-width;
+        margin-left: auto;
+        margin-right: auto;
+
+        .content {
+            border: 5px solid #FFB377;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            background: #FFD177;
+
+
+            .projects {
+                height: 250px;
+                padding-left: 3%;
+                padding-right: 1%;
+
+                .project {
+                    height: 250px;
+                    .name {
+                        height: 10%;
+                        text-transform: uppercase;
+                        background: #D20005;
+                        line-height: 25px;
+                        color: @title-color;
+                    }
+                    img {
+                        height: 90%;
+                    }
+                    background: #A80004;
+                    margin-left: 2%;
+                    text-align: center;
+                    height: inherit;
+                    width: 30%;
+                    float: left;
+                    position: relative;
+                }
+            }
+            .work {
+                margin-top: 25px;
+
+                .company {
+                    width: 70%;
+                    margin-left: 18%;
+                    margin-right: 12%;
+                    text-align: center;
+                    height: 100px;
+                    .icon {
+                        background: white;
+                        min-height: 1px;
+                        height: 40px;
+                        width: 20%;
+                        float: left;
+                    }
+                    .text {
+                        float: right;
+                        width: 74%;
+                        margin-left: 6%;
+                        text-align: left;
+                        font-size: 14px;
+                        .name {
+                            font-size: 20px;
+                            .date {
+                                margin-left: 5px;
+                                font-size: 15px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    margin-top: 10px;
+                }
+            }
+            .education {
+                margin-top: 20px;
+                .school {
+                    width: 70%;
+                    margin-left: 18%;
+                    margin-right: 12%;
+                    text-align: center;
+                    height: 100px;
+                    .icon {
+                        background: black;
+                        min-height: 1px;
+                        height: 40px;
+                        width: 20%;
+                        float: left;
+                    }
+                    text-align: center; 
+                    .name {
+                        font-size: 20px;
+                        float: right;
+                        width: 74%;
+                        margin-left: 6%;
+                        text-align: left;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+.footer {
+    background: black;
+    height: 40px;
+}
+
+.clear {
+    clear: both;
+}
