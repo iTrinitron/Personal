@@ -61,7 +61,6 @@ body {
 }
 .container-container {
   background: #303030;
-  padding-bottom: 15px;
 }
 .container-container .container {
   width: 1080px;
@@ -186,6 +185,69 @@ body {
   margin-left: 5px;
   font-size: 15px;
   line-height: 20px;
+}
+.container-container .container .tree-content .tree-left,
+.container-container .container .tree-content .tree-right {
+  background: #303030;
+  width: 48%;
+  float: left;
+}
+.container-container .container .tree-content .tree-left .tree-node,
+.container-container .container .tree-content .tree-right .tree-node {
+  margin-bottom: 400px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #424242;
+  text-align: left;
+}
+.container-container .container .tree-content .tree-left .tree-node .icon,
+.container-container .container .tree-content .tree-right .tree-node .icon {
+  height: 100%;
+  min-height: 1px;
+  width: 20%;
+  float: left;
+  border: 1px solid black;
+}
+.container-container .container .tree-content .tree-left .tree-node .icon img,
+.container-container .container .tree-content .tree-right .tree-node .icon img {
+  width: 100%;
+  display: none;
+}
+.container-container .container .tree-content .tree-left .tree-node .text,
+.container-container .container .tree-content .tree-right .tree-node .text {
+  padding: 8px;
+  float: left;
+  width: 74%;
+  margin-left: 1%;
+  font-size: 14px;
+  color: #ffffff;
+}
+.container-container .container .tree-content .tree-left .tree-node .text .name,
+.container-container .container .tree-content .tree-right .tree-node .text .name {
+  font-size: 20px;
+  color: #f38730;
+}
+.container-container .container .tree-content .tree-left .tree-node .text .name .date,
+.container-container .container .tree-content .tree-right .tree-node .text .name .date {
+  margin-left: 5px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.container-container .container .tree-content .tree-left .tree-node {
+  text-align: right;
+}
+.container-container .container .tree-content .tree-left .tree-node .icon {
+  float: right;
+}
+.container-container .container .tree-content .tree-left .tree-node .text {
+  float: right;
+  margin-left: 0px;
+  margin-right: 1%;
+}
+.container-container .container .tree-content .tree-right {
+  position: relative;
+  bottom: -200px;
 }
 .footer {
   background: #000000;
