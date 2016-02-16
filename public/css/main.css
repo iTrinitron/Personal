@@ -12,11 +12,12 @@ body {
   color: #F38730;
   background: #000000;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  min-width: 1380px;
 }
 .header .name {
   padding-top: 60px;
   font-size: 60px;
-  color: #f38730;
+  color: #F38730;
   font-family: 'Lato', sans-serif;
 }
 .header .icons {
@@ -45,7 +46,7 @@ body {
   text-align: center;
 }
 .navbar-container .navbar .link .name {
-  color: #f38730;
+  color: #F38730;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
@@ -60,27 +61,36 @@ body {
   opacity: 0.4;
 }
 .container-container {
-  background: #303030;
+  width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .container-container .container {
+  background: #303030;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .container-container .container .content {
   margin-left: 15px;
   margin-right: 15px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .container-container .container .content .projects {
-  height: 250px;
+  height: 230px;
   padding-left: 3%;
   padding-right: 1%;
 }
 .container-container .container .content .projects .project {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-  height: 250px;
+  height: 240px;
+  padding: 5px;
   background: #424242;
   margin-left: 2%;
   text-align: center;
@@ -89,18 +99,24 @@ body {
   float: left;
   position: relative;
 }
-.container-container .container .content .projects .project .name {
-  height: 10%;
-  text-transform: uppercase;
-  line-height: 25px;
-  color: #f38730;
-  background: #424242;
-}
 .container-container .container .content .projects .project img {
-  height: 90%;
+  width: 100%;
+}
+.container-container .container .content .projects .project .help {
+  display: none;
+  position: relative;
+  top: -235px;
+  background: rgba(85, 85, 85, 0.7);
+  color: #F38730;
+  height: 180px;
+  padding-top: 55px;
 }
 .container-container .container .content .projects .project:hover {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  background: #555555;
+}
+.container-container .container .content .projects .project:hover .help {
+  display: block;
 }
 .container-container .container .content .work {
   margin-top: 45px;
@@ -120,7 +136,6 @@ body {
   min-height: 1px;
   width: 20%;
   float: left;
-  border: 1px solid black;
 }
 .container-container .container .content .work .company .icon img {
   width: 100%;
@@ -137,7 +152,7 @@ body {
 }
 .container-container .container .content .work .company .text .name {
   font-size: 20px;
-  color: #f38730;
+  color: #F38730;
 }
 .container-container .container .content .work .company .text .name .date {
   margin-left: 5px;
@@ -162,11 +177,10 @@ body {
   min-height: 1px;
   width: 20%;
   float: left;
-  border: 1px solid black;
 }
 .container-container .container .content .education .school .icon img {
-  width: 100%;
   display: none;
+  width: 100%;
 }
 .container-container .container .content .education .school .text {
   padding: 8px;
@@ -179,7 +193,7 @@ body {
 }
 .container-container .container .content .education .school .text .name {
   font-size: 20px;
-  color: #f38730;
+  color: #F38730;
 }
 .container-container .container .content .education .school .text .name .date {
   margin-left: 5px;
@@ -189,61 +203,60 @@ body {
 .container-container .container .tree-content .tree-left,
 .container-container .container .tree-content .tree-right {
   background: #303030;
-  width: 48%;
+  width: 38%;
   float: left;
 }
 .container-container .container .tree-content .tree-left .tree-node,
 .container-container .container .tree-content .tree-right .tree-node {
-  margin-bottom: 400px;
+  margin-bottom: 50px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   background: #424242;
-  text-align: left;
-}
-.container-container .container .tree-content .tree-left .tree-node .icon,
-.container-container .container .tree-content .tree-right .tree-node .icon {
-  height: 100%;
-  min-height: 1px;
-  width: 20%;
-  float: left;
-  border: 1px solid black;
-}
-.container-container .container .tree-content .tree-left .tree-node .icon img,
-.container-container .container .tree-content .tree-right .tree-node .icon img {
-  width: 100%;
-  display: none;
+  text-align: center;
 }
 .container-container .container .tree-content .tree-left .tree-node .text,
 .container-container .container .tree-content .tree-right .tree-node .text {
-  padding: 8px;
-  float: left;
-  width: 74%;
-  margin-left: 1%;
+  width: 100%;
   font-size: 14px;
   color: #ffffff;
+  text-align: left;
+}
+.container-container .container .tree-content .tree-left .tree-node .text .icon,
+.container-container .container .tree-content .tree-right .tree-node .text .icon {
+  background: #212121;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  min-height: 1px;
+  text-align: center;
+}
+.container-container .container .tree-content .tree-left .tree-node .text .icon img,
+.container-container .container .tree-content .tree-right .tree-node .text .icon img {
+  width: 85%;
+}
+.container-container .container .tree-content .tree-left .tree-node .text .date,
+.container-container .container .tree-content .tree-right .tree-node .text .date {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  font-size: 15px;
+  line-height: 20px;
 }
 .container-container .container .tree-content .tree-left .tree-node .text .name,
 .container-container .container .tree-content .tree-right .tree-node .text .name {
   font-size: 20px;
-  color: #f38730;
+  padding: 5px;
+  color: #F38730;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .name .date,
-.container-container .container .tree-content .tree-right .tree-node .text .name .date {
-  margin-left: 5px;
-  font-size: 15px;
-  line-height: 20px;
-}
-.container-container .container .tree-content .tree-left .tree-node {
-  text-align: right;
+.container-container .container .tree-content .tree-left .tree-node .text .desc,
+.container-container .container .tree-content .tree-right .tree-node .text .desc {
+  padding: 5px;
 }
 .container-container .container .tree-content .tree-left .tree-node .icon {
   float: right;
 }
 .container-container .container .tree-content .tree-left .tree-node .text {
   float: right;
-  margin-left: 0px;
-  margin-right: 1%;
 }
 .container-container .container .tree-content .tree-right {
   position: relative;
