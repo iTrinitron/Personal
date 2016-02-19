@@ -176,6 +176,17 @@ body {
 											float: left;
 											position: relative;
 
+											&:hover {
+												box-shadow: @z-3;
+												background: @bg-color-5;
+											}
+											
+											&:hover .help {
+												display: block;
+											}
+											
+											
+											
 											img {
 												width: 100%;
 												display: block;
@@ -208,15 +219,6 @@ body {
 												}
 												
 											}
-									}
-									.project:hover {
-											box-shadow: @z-3;
-											background: @bg-color-5;
-									}
-									
-									.project:hover .help {
-										display: block;
-										cursor: pointer;
 									}
 							}
 							.work {

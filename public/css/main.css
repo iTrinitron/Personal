@@ -122,6 +122,13 @@ body {
   float: left;
   position: relative;
 }
+.container-container .container .content .projects .project:hover {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  background: #555555;
+}
+.container-container .container .content .projects .project:hover .help {
+  display: block;
+}
 .container-container .container .content .projects .project img {
   width: 100%;
   display: block;
@@ -149,14 +156,6 @@ body {
 }
 .container-container .container .content .projects .project .help .lang {
   font-size: 14px;
-}
-.container-container .container .content .projects .project:hover {
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-  background: #555555;
-}
-.container-container .container .content .projects .project:hover .help {
-  display: block;
-  cursor: pointer;
 }
 .container-container .container .content .work {
   margin-top: 45px;
