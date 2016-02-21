@@ -18,7 +18,12 @@ body {
   font-family: Raleway;
   color: black;
 }
-.header {
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 40px;
+}
+.wrapper .header {
   height: 225px;
   text-align: center;
   color: #F38730;
@@ -26,27 +31,38 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   min-width: 1380px;
 }
-.header .name {
+.wrapper .header .name {
   padding-top: 60px;
   font-size: 60px;
   color: #F38730;
   font-family: 'Lato', sans-serif;
 }
-.header .icons {
+.wrapper .header .icons {
   text-align: center;
 }
-.header .icons a {
+.wrapper .header .icons a {
   font-size: 25px;
   margin-left: 10px;
   color: #ffffff;
 }
-.navbar-container .navbar {
+.wrapper .footer {
+  background: #000000;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  height: 40px;
+  min-width: 1380px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* this allows an absolute div to be full width -- http://stackoverflow.com/questions/6625116/css-position-absolute-full-width-problem */
+}
+.wrapper .navbar-container .navbar {
   width: 1380px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
-.navbar-container .navbar .link {
+.wrapper .navbar-container .navbar .link {
   padding-top: 25px;
   padding-bottom: 25px;
   background: #212121;
@@ -55,30 +71,30 @@ body {
   position: relative;
   text-align: center;
 }
-.navbar-container .navbar .link .name {
+.wrapper .navbar-container .navbar .link .name {
   color: #F38730;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
 }
-.navbar-container .navbar .link .desc {
+.wrapper .navbar-container .navbar .link .desc {
   color: #ffffff;
   margin-top: 10px;
   padding-left: 15%;
   padding-right: 15%;
 }
-.navbar-container .navbar .link:hover {
+.wrapper .navbar-container .navbar .link:hover {
   background: #303030;
   cursor: pointer;
 }
-.container-container {
+.wrapper .container-container {
   width: 1380px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.container-container .container {
+.wrapper .container-container .container {
   background: #303030;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   width: 1080px;
@@ -87,7 +103,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.container-container .container .maintenance {
+.wrapper .container-container .container .maintenance {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
   background: #424242;
@@ -99,18 +115,18 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.container-container .container .content {
+.wrapper .container-container .container .content {
   margin-left: 15px;
   margin-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.container-container .container .content .projects {
+.wrapper .container-container .container .content .projects {
   height: 230px;
   padding-left: 3%;
   padding-right: 1%;
 }
-.container-container .container .content .projects .project {
+.wrapper .container-container .container .content .projects .project {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
   background: #424242;
@@ -120,18 +136,18 @@ body {
   float: left;
   position: relative;
 }
-.container-container .container .content .projects .project:hover {
+.wrapper .container-container .container .content .projects .project:hover {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   background: #555555;
 }
-.container-container .container .content .projects .project:hover .help {
+.wrapper .container-container .container .content .projects .project:hover .help {
   display: block;
 }
-.container-container .container .content .projects .project img {
+.wrapper .container-container .container .content .projects .project img {
   width: 100%;
   display: block;
 }
-.container-container .container .content .projects .project .help {
+.wrapper .container-container .container .content .projects .project .help {
   display: none;
   position: absolute;
   bottom: 0px;
@@ -142,23 +158,23 @@ body {
   background: rgba(85, 85, 85, 0.85);
   color: #ffffff;
 }
-.container-container .container .content .projects .project .help .name {
+.wrapper .container-container .container .content .projects .project .help .name {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 10px;
 }
-.container-container .container .content .projects .project .help .desc {
+.wrapper .container-container .container .content .projects .project .help .desc {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 10px;
 }
-.container-container .container .content .projects .project .help .lang {
+.wrapper .container-container .container .content .projects .project .help .lang {
   font-size: 14px;
 }
-.container-container .container .content .work {
+.wrapper .container-container .container .content .work {
   margin-top: 45px;
 }
-.container-container .container .content .work .company {
+.wrapper .container-container .container .content .work .company {
   background: #424242;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 2px;
@@ -168,7 +184,7 @@ body {
   text-align: center;
   margin-top: 15px;
 }
-.container-container .container .content .work .company .icon {
+.wrapper .container-container .container .content .work .company .icon {
   height: 99px;
   padding-top: 1px;
   min-height: 1px;
@@ -176,10 +192,10 @@ body {
   float: left;
   background: #555555;
 }
-.container-container .container .content .work .company .icon img {
+.wrapper .container-container .container .content .work .company .icon img {
   width: 98px;
 }
-.container-container .container .content .work .company .text {
+.wrapper .container-container .container .content .work .company .text {
   padding: 8px;
   float: left;
   width: 79%;
@@ -188,19 +204,19 @@ body {
   font-size: 14px;
   color: #ffffff;
 }
-.container-container .container .content .work .company .text .name {
+.wrapper .container-container .container .content .work .company .text .name {
   font-size: 20px;
   color: #F38730;
 }
-.container-container .container .content .work .company .text .name .date {
+.wrapper .container-container .container .content .work .company .text .name .date {
   margin-left: 5px;
   font-size: 15px;
   line-height: 20px;
 }
-.container-container .container .content .education {
+.wrapper .container-container .container .content .education {
   margin-top: 40px;
 }
-.container-container .container .content .education .school {
+.wrapper .container-container .container .content .education .school {
   background: #424242;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 2px;
@@ -210,7 +226,7 @@ body {
   text-align: center;
   margin-top: 15px;
 }
-.container-container .container .content .education .school .icon {
+.wrapper .container-container .container .content .education .school .icon {
   height: 98px;
   padding-top: 2px;
   min-height: 1px;
@@ -218,10 +234,10 @@ body {
   float: left;
   background: #555555;
 }
-.container-container .container .content .education .school .icon img {
+.wrapper .container-container .container .content .education .school .icon img {
   width: 96px;
 }
-.container-container .container .content .education .school .text {
+.wrapper .container-container .container .content .education .school .text {
   padding: 8px;
   float: left;
   width: 79%;
@@ -230,23 +246,23 @@ body {
   font-size: 14px;
   color: #ffffff;
 }
-.container-container .container .content .education .school .text .name {
+.wrapper .container-container .container .content .education .school .text .name {
   font-size: 20px;
   color: #F38730;
 }
-.container-container .container .content .education .school .text .name .date {
+.wrapper .container-container .container .content .education .school .text .name .date {
   margin-left: 5px;
   font-size: 15px;
   line-height: 20px;
 }
-.container-container .container .tree-content .tree-left,
-.container-container .container .tree-content .tree-right {
+.wrapper .container-container .container .tree-content .tree-left,
+.wrapper .container-container .container .tree-content .tree-right {
   background: #303030;
   width: 38%;
   float: left;
 }
-.container-container .container .tree-content .tree-left .tree-node,
-.container-container .container .tree-content .tree-right .tree-node {
+.wrapper .container-container .container .tree-content .tree-left .tree-node,
+.wrapper .container-container .container .tree-content .tree-right .tree-node {
   margin-bottom: 50px;
   width: 95%;
   margin-left: auto;
@@ -254,65 +270,65 @@ body {
   background: #424242;
   text-align: center;
 }
-.container-container .container .tree-content .tree-left .tree-node .text,
-.container-container .container .tree-content .tree-right .tree-node .text {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text {
   width: 100%;
   font-size: 14px;
   color: #ffffff;
   text-align: left;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .icon,
-.container-container .container .tree-content .tree-right .tree-node .text .icon {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text .icon,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text .icon {
   background: #212121;
   width: 98%;
   text-align: center;
   padding: 1%;
   padding-bottom: 0px;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .icon img,
-.container-container .container .tree-content .tree-right .tree-node .text .icon img {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text .icon img,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text .icon img {
   width: 100%;
   display: block;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .date,
-.container-container .container .tree-content .tree-right .tree-node .text .date {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text .date,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text .date {
   color: rgba(255, 255, 255, 0.7);
   padding: 5px;
   font-size: 15px;
   line-height: 20px;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .name,
-.container-container .container .tree-content .tree-right .tree-node .text .name {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text .name,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text .name {
   font-size: 20px;
   padding: 5px;
   color: #F38730;
 }
-.container-container .container .tree-content .tree-left .tree-node .text .desc,
-.container-container .container .tree-content .tree-right .tree-node .text .desc {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text .desc,
+.wrapper .container-container .container .tree-content .tree-right .tree-node .text .desc {
   padding: 5px;
 }
-.container-container .container .tree-content .tree-left .tree-node .icon {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .icon {
   float: right;
 }
-.container-container .container .tree-content .tree-left .tree-node .text {
+.wrapper .container-container .container .tree-content .tree-left .tree-node .text {
   float: right;
 }
-.container-container .container .tree-content .tree-right {
+.wrapper .container-container .container .tree-content .tree-right {
   position: relative;
   bottom: -200px;
 }
-.container-container .container .about {
+.wrapper .container-container .container .about {
   padding-left: 55px;
   padding-right: 55px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.container-container .container .about .left {
+.wrapper .container-container .container .about .left {
   float: left;
   width: 21%;
 }
-.container-container .container .about .left .profile {
+.wrapper .container-container .container .about .left .profile {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
   background: #424242;
@@ -322,17 +338,17 @@ body {
   margin-bottom: 20px;
   float: left;
 }
-.container-container .container .about .left .profile img {
+.wrapper .container-container .container .about .left .profile img {
   width: 100%;
   display: block;
 }
-.container-container .container .about .right {
+.wrapper .container-container .container .about .right {
   float: left;
   width: 72%;
   margin-left: 2%;
   color: #ffffff;
 }
-.container-container .container .about .right .title {
+.wrapper .container-container .container .about .right .title {
   color: #F38730;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 15px;
@@ -345,7 +361,7 @@ body {
   position: relative;
   margin-bottom: 12px;
 }
-.container-container .container .about .right .desc {
+.wrapper .container-container .container .about .right .desc {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 15px;
   padding-top: 28px;
@@ -355,7 +371,7 @@ body {
   font-size: 16px;
   width: 100%;
 }
-.container-container .container .blog .title {
+.wrapper .container-container .container .blog .title {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
   background: #424242;
@@ -368,7 +384,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.container-container .container .blog .event {
+.wrapper .container-container .container .blog .event {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   background: #424242;
@@ -379,44 +395,38 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.container-container .container .blog .event .top {
+.wrapper .container-container .container .blog .event .top {
   color: #F38730;
   font-size: 18px;
   margin-bottom: 5px;
 }
-.container-container .container .blog .event .top .name {
+.wrapper .container-container .container .blog .event .top .name {
   text-align: left;
   float: left;
   width: 50%;
 }
-.container-container .container .blog .event .top .date {
+.wrapper .container-container .container .blog .event .top .date {
   text-align: right;
   float: left;
   width: 50%;
 }
-.container-container .container .blog .event .desc {
+.wrapper .container-container .container .blog .event .desc {
   padding-left: 10px;
   text-align: left;
   color: #ffffff;
 }
-.container-container .container .resume {
+.wrapper .container-container .container .resume {
   color: #F38730;
   margin-top: 30px;
   text-align: center;
 }
-.container-container .container .resume .title {
+.wrapper .container-container .container .resume .title {
   color: #F38730;
   margin-bottom: 5px;
 }
-.container-container .container .resume .icon {
+.wrapper .container-container .container .resume .icon {
   font-size: 19px;
   color: #ffffff;
-}
-.footer {
-  background: #000000;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-  height: 40px;
-  min-width: 1380px;
 }
 .clear {
   clear: both;

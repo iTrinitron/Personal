@@ -5,8 +5,6 @@ Interesting read on why images have height below them.  This is due to them bein
 images to be block stops this bug.
 */
 
-
-
 @header-height: 225px;
 @content-width: 1080px;
 
@@ -39,6 +37,8 @@ images to be block stops this bug.
 
 @h2-size: 25px;
 
+@footer-height: 40px;
+
 .orange {
 	color: @main-color;
 }
@@ -56,6 +56,11 @@ body {
     font-family: Raleway;
     color: black;
 }
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: @footer-height;
 
 .header {
     height: @header-height;
@@ -83,6 +88,18 @@ body {
 			}
 		
 }
+
+.footer {
+    background: @bg-color-1;
+    box-shadow: @z-t-1;
+    height: @footer-height;
+	min-width: @content-width + 300;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	right: 0; /* this allows an absolute div to be full width -- http://stackoverflow.com/questions/6625116/css-position-absolute-full-width-problem */
+}
+
 .navbar-container {
 	
     .navbar {
@@ -517,12 +534,6 @@ body {
 			}
 		
 }
-
-.footer {
-    background: @bg-color-1;
-    box-shadow: @z-t-1;
-    height: 40px;
-	min-width: @content-width + 300;
 }
 
 .clear {
