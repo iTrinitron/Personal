@@ -62,31 +62,466 @@ body {
 	position: relative;
 	padding-bottom: @footer-height;
 
-.header {
-    height: @header-height;
-    text-align: center;
-    color: #F38730;
-    background: @bg-color-1;
-    box-shadow: @z-1;
-	min-width: @content-width + 300;
+	.header {
+		height: @header-height;
+		text-align: center;
+		color: #F38730;
+		background: @bg-color-1;
+		box-shadow: @z-1;
+		min-width: @content-width + 300;
+					
+				.name {
+						padding-top: 60px;
+						font-size: 60px;
+						color: @main-color;
+						font-family: 'Lato', sans-serif;
+				}
+
+				.icons {
+						text-align: center;
+						a {
+								font-size: 25px;
+								margin-left: 10px;
+								color: @white-color;
+						}
+
+				}
+			
+	}
+
+	.navbar-container {
+		.navbar {
+			width: @content-width + 300;
+			margin-left: auto;
+			margin-right: auto;
+			box-shadow: @z-1;
+
+			
+
+			.link {
+				padding-top: 25px;
+				padding-bottom: 25px;
+				background: @bg-color-2;
 				
-			.name {
-					padding-top: 60px;
-					font-size: 60px;
+				.name {
 					color: @main-color;
 					font-family: 'Lato', sans-serif;
+					font-size: 30px;
+					text-transform: uppercase;
+				}
+				.desc {
+					color: @white-color;
+					margin-top: 10px;
+					padding-left: 15%;
+					padding-right: 15%;
+				}
+				width: 33%;
+				float: left;
+				position: relative;
+				text-align: center;
 			}
+			
+			.link:hover {
+				background: @bg-color-3;
+				cursor: pointer;
+			}
+			
+			.arrow {
+				
+			}
+		}
+	}
 
-			.icons {
+	.container-container {
+		width: @content-width + 300;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		.container {
+				background: @bg-color-3;
+				box-shadow: @z-t-1;
+				width: @content-width;
+				margin-left: auto;
+				margin-right: auto;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+				.maintenance {
+					box-shadow: @z-2;
+					padding: 5px;
+					background: @bg-color-4;
 					text-align: center;
-					a {
-							font-size: 25px;
-							margin-left: 10px;
-							color: @white-color;
-					}
+					color: @main-color;
+					width: 90%;
+					font-size: @h2-size;
+					position: relative;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				
+				.content {
+						margin-left: 15px;
+						margin-right: 15px;
+						padding-top: 20px;
+						padding-bottom: 20px;
 
-			}
-		
+
+						.projects {
+								height: 230px;
+								padding-left: 3%;
+								padding-right: 1%;
+
+								.project {
+										box-shadow: @z-2;
+										padding: 5px;
+										background: @bg-color-4;
+										margin-left: 2%;
+										text-align: center;
+										width: 30%;
+										float: left;
+										position: relative;
+
+										&:hover {
+											box-shadow: @z-3;
+											background: @bg-color-5;
+										}
+										
+										&:hover .help {
+											display: block;
+										}
+										
+										
+										
+										img {
+											width: 100%;
+											display: block;
+										}
+										.help {
+											display: none;
+											position: absolute;
+											bottom: 0px;
+											left: 0px;
+											padding-top: 15px;
+											padding-bottom: 15px;
+											width: 100%;
+											background: @bg-hover-text;
+											color: @white-color;
+											
+											.name {
+												padding-left: 10px;
+												padding-right: 10px;
+												margin-bottom: 10px;
+											}
+											
+											.desc {
+												padding-left: 10px;
+												padding-right: 10px;
+												margin-bottom: 10px;
+											}
+											
+											.lang {
+												font-size: 14px;
+											}
+											
+										}
+								}
+						}
+						.work {
+								margin-top: 45px;
+
+								.company {
+										background: @bg-color-4;
+										box-shadow: @z-2;
+										padding: 2px;
+										width: 65%;
+										margin-left: auto;
+										margin-right: auto;
+										text-align: center;
+										.icon {
+												height: 99px;
+												padding-top: 1px;
+												min-height: 1px;
+												width: 15%;
+												float: left;
+												background: @bg-color-5;
+												img {
+													width: 98px;
+												}
+										}
+										.text {
+												padding: 8px;
+												float: left;
+												width: 79%;
+												margin-left: 3%;
+												text-align: left;
+												font-size: 14px;
+												color: @white-color;
+												.name {
+														font-size: 20px;
+														color: @main-color;
+														.date {
+																margin-left: 5px;
+																font-size: 15px;
+																line-height: 20px;
+														}
+												}
+										}
+										margin-top: 15px;
+								}
+						}
+						.education {
+								margin-top: 40px;
+								.school {
+										background: @bg-color-4;
+										box-shadow: @z-2;
+										padding: 2px;
+										width: 65%;
+										margin-left: auto;
+										margin-right: auto;
+										text-align: center;
+										.icon {
+												height: 98px;
+												padding-top: 2px;
+												min-height: 1px;
+												width: 15%;
+												float: left;
+												background: @bg-color-5;
+												img {
+													width: 96px;
+												}
+										}
+										.text {
+												padding: 8px;
+												float: left;
+												width: 79%;
+												margin-left: 3%;
+												text-align: left;
+												font-size: 14px;
+												color: @white-color;
+												.name {
+														font-size: 20px;
+														color: @main-color;
+														.date {
+																margin-left: 5px;
+																font-size: 15px;
+																line-height: 20px;
+														}
+												}
+										}
+										margin-top: 15px;
+								} 
+						}
+
+
+
+				}
+
+				.tree-content {
+						//VIEW 2
+						.tree-left, .tree-right {
+								background: @bg-color-3;
+								width: 38%;
+								float: left;
+
+
+
+								.tree-node {
+										margin-bottom: 50px;
+										width: 95%;
+										margin-left: auto;
+										margin-right: auto;
+										background: @bg-color-4;
+										text-align: center;
+
+										.text {
+												width: 100%;
+												font-size: 14px;
+												color: @white-color;
+												text-align: left;
+												
+
+												.icon {
+													background: @bg-color-2;
+													width: 98%;
+													text-align: center;
+													padding: 1%;
+													padding-bottom: 0px;
+														img {
+															width: 100%;
+															display: block;
+														}
+												}
+
+												.date {
+													color: @white-secondary-color;
+													padding: 5px;
+													font-size: 15px;
+													line-height: 20px;
+												}
+
+												.name {
+														font-size: 20px;
+														padding: 5px;
+														color: @main-color;
+
+												}
+
+												.desc {
+													padding: 5px;
+
+												}
+										}
+								}
+						}
+						.tree-left {
+								.tree-node {
+										.icon {
+												float: right;
+										}
+										.text {
+												float: right;
+										}
+								}
+						}
+						.tree-right {
+								position: relative;
+								bottom: -200px;
+						}
+				}
+				
+				
+				.about {
+					padding-left: 55px;
+					padding-right: 55px;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					margin-bottom: 20px;
+				
+					.left {
+						float: left;
+						width: 21%;
+						
+						.profile {
+							box-shadow: @z-2;
+							padding: 5px;
+							background: @bg-color-4;
+							text-align: center;
+							width: 100%;
+							position: relative;
+							margin-bottom: 20px;
+							float: left;
+							
+							img {
+								width: 100%;
+								display: block;
+							}
+						}
+					}
+				
+					.right {
+						float: left;
+						width: 72%;
+						margin-left: 2%;
+						color: @white-color;
+						
+						.title {
+							color: @main-color;
+							box-shadow: @z-2;
+							padding: 15px;
+							padding-bottom: 10px;
+							padding-top: 10px;
+							font-size: @h2-size;
+							background: @bg-color-4;
+							text-align: center;
+							width: 100%;
+							position: relative;
+							margin-bottom: 12px;
+						}
+					
+						.desc {
+							box-shadow: @z-2;
+							padding: 15px;
+							padding-top: 28px;
+							padding-bottom: 28x;
+							background: @bg-color-4;
+							text-align: center;
+							font-size: 16px;
+							width: 100%;
+						}
+					}
+				}
+				
+				.blog {
+					.title {
+						box-shadow: @z-2;
+						padding: 5px;
+						background: @bg-color-4;
+						text-align: center;
+						color: @main-color;
+						width: 25%;
+						font-size: @h2-size;
+						position: relative;
+						margin-bottom: 20px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					.event {
+						box-shadow: @z-2;
+						padding: 10px;
+						background: @bg-color-4;
+						text-align: center;
+						width: 68%;
+						position: relative;
+						margin-bottom: 20px;
+						margin-left: auto;
+						margin-right: auto;
+						
+						
+						.top {
+							color: @main-color;
+							font-size: 18px;
+							margin-bottom: 5px;
+							
+							.name {
+								text-align: left;
+								float: left;
+								width: 50%;
+							}
+							
+							.date {
+								text-align: right;
+								float: left;
+								width: 50%;
+							}
+						}
+						
+						.desc {
+							padding-left: 10px;
+							text-align: left;
+							color: @white-color;
+						}
+					}
+				}
+				
+				.resume {
+					color: @main-color;
+					margin-top: 30px;
+					text-align: center;
+					
+					.title {
+						color: @main-color;
+						margin-bottom: 5px;
+					}
+					
+					.icon {
+					font-size: 19px;
+						color: @white-color;
+					}
+				}
+		}
+	}
 }
 
 .footer {
@@ -98,442 +533,6 @@ body {
     bottom: 0;
     left: 0;
 	right: 0; /* this allows an absolute div to be full width -- http://stackoverflow.com/questions/6625116/css-position-absolute-full-width-problem */
-}
-
-.navbar-container {
-	
-    .navbar {
-        width: @content-width + 300;
-        margin-left: auto;
-        margin-right: auto;
-		box-shadow: @z-1;
-
-        
-
-        .link {
-			padding-top: 25px;
-			padding-bottom: 25px;
-            background: @bg-color-2;
-			
-            .name {
-                color: @main-color;
-                font-family: 'Lato', sans-serif;
-                font-size: 30px;
-                text-transform: uppercase;
-            }
-            .desc {
-                color: @white-color;
-                margin-top: 10px;
-                padding-left: 15%;
-                padding-right: 15%;
-            }
-            width: 33%;
-            float: left;
-            position: relative;
-            text-align: center;
-        }
-        
-        .link:hover {
-            background: @bg-color-3;
-			cursor: pointer;
-        }
-        
-        .arrow {
-            
-        }
-    }
-}
-.container-container {
-		width: @content-width + 300;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 20px;
-		margin-bottom: 20px;
-
-			.container {
-					background: @bg-color-3;
-					box-shadow: @z-t-1;
-					width: @content-width;
-					margin-left: auto;
-					margin-right: auto;
-					padding-top: 10px;
-					padding-bottom: 10px;
-
-					.maintenance {
-						box-shadow: @z-2;
-						padding: 5px;
-						background: @bg-color-4;
-						text-align: center;
-						color: @main-color;
-						width: 90%;
-						font-size: @h2-size;
-						position: relative;
-						margin-left: auto;
-						margin-right: auto;
-					}
-					
-					.content {
-							margin-left: 15px;
-							margin-right: 15px;
-							padding-top: 20px;
-							padding-bottom: 20px;
-
-
-							.projects {
-									height: 230px;
-									padding-left: 3%;
-									padding-right: 1%;
-
-									.project {
-											box-shadow: @z-2;
-											padding: 5px;
-											background: @bg-color-4;
-											margin-left: 2%;
-											text-align: center;
-											width: 30%;
-											float: left;
-											position: relative;
-
-											&:hover {
-												box-shadow: @z-3;
-												background: @bg-color-5;
-											}
-											
-											&:hover .help {
-												display: block;
-											}
-											
-											
-											
-											img {
-												width: 100%;
-												display: block;
-											}
-											.help {
-												display: none;
-												position: absolute;
-												bottom: 0px;
-												left: 0px;
-												padding-top: 15px;
-												padding-bottom: 15px;
-												width: 100%;
-												background: @bg-hover-text;
-												color: @white-color;
-												
-												.name {
-													padding-left: 10px;
-													padding-right: 10px;
-													margin-bottom: 10px;
-												}
-												
-												.desc {
-													padding-left: 10px;
-													padding-right: 10px;
-													margin-bottom: 10px;
-												}
-												
-												.lang {
-													font-size: 14px;
-												}
-												
-											}
-									}
-							}
-							.work {
-									margin-top: 45px;
-
-									.company {
-											background: @bg-color-4;
-											box-shadow: @z-2;
-											padding: 2px;
-											width: 65%;
-											margin-left: auto;
-											margin-right: auto;
-											text-align: center;
-											.icon {
-													height: 99px;
-													padding-top: 1px;
-													min-height: 1px;
-													width: 15%;
-													float: left;
-													background: @bg-color-5;
-													img {
-														width: 98px;
-													}
-											}
-											.text {
-													padding: 8px;
-													float: left;
-													width: 79%;
-													margin-left: 3%;
-													text-align: left;
-													font-size: 14px;
-													color: @white-color;
-													.name {
-															font-size: 20px;
-															color: @main-color;
-															.date {
-																	margin-left: 5px;
-																	font-size: 15px;
-																	line-height: 20px;
-															}
-													}
-											}
-											margin-top: 15px;
-									}
-							}
-							.education {
-									margin-top: 40px;
-									.school {
-											background: @bg-color-4;
-											box-shadow: @z-2;
-											padding: 2px;
-											width: 65%;
-											margin-left: auto;
-											margin-right: auto;
-											text-align: center;
-											.icon {
-													height: 98px;
-													padding-top: 2px;
-													min-height: 1px;
-													width: 15%;
-													float: left;
-													background: @bg-color-5;
-													img {
-														width: 96px;
-													}
-											}
-											.text {
-													padding: 8px;
-													float: left;
-													width: 79%;
-													margin-left: 3%;
-													text-align: left;
-													font-size: 14px;
-													color: @white-color;
-													.name {
-															font-size: 20px;
-															color: @main-color;
-															.date {
-																	margin-left: 5px;
-																	font-size: 15px;
-																	line-height: 20px;
-															}
-													}
-											}
-											margin-top: 15px;
-									} 
-							}
-
-
-
-					}
-
-					.tree-content {
-							//VIEW 2
-							.tree-left, .tree-right {
-									background: @bg-color-3;
-									width: 38%;
-									float: left;
-
-
-
-									.tree-node {
-											margin-bottom: 50px;
-											width: 95%;
-											margin-left: auto;
-											margin-right: auto;
-											background: @bg-color-4;
-											text-align: center;
-
-											.text {
-													width: 100%;
-													font-size: 14px;
-													color: @white-color;
-													text-align: left;
-													
-
-													.icon {
-														background: @bg-color-2;
-														width: 98%;
-														text-align: center;
-														padding: 1%;
-														padding-bottom: 0px;
-															img {
-																width: 100%;
-																display: block;
-															}
-													}
-
-													.date {
-														color: @white-secondary-color;
-														padding: 5px;
-														font-size: 15px;
-														line-height: 20px;
-													}
-
-													.name {
-															font-size: 20px;
-															padding: 5px;
-															color: @main-color;
-
-													}
-
-													.desc {
-														padding: 5px;
-
-													}
-											}
-									}
-							}
-							.tree-left {
-									.tree-node {
-											.icon {
-													float: right;
-											}
-											.text {
-													float: right;
-											}
-									}
-							}
-							.tree-right {
-									position: relative;
-									bottom: -200px;
-							}
-					}
-					
-					
-					.about {
-						padding-left: 55px;
-						padding-right: 55px;
-						padding-top: 20px;
-						padding-bottom: 20px;
-						margin-bottom: 20px;
-					
-						.left {
-							float: left;
-							width: 21%;
-							
-							.profile {
-								box-shadow: @z-2;
-								padding: 5px;
-								background: @bg-color-4;
-								text-align: center;
-								width: 100%;
-								position: relative;
-								margin-bottom: 20px;
-								float: left;
-								
-								img {
-									width: 100%;
-									display: block;
-								}
-							}
-						}
-					
-						.right {
-							float: left;
-							width: 72%;
-							margin-left: 2%;
-							color: @white-color;
-							
-							.title {
-								color: @main-color;
-								box-shadow: @z-2;
-								padding: 15px;
-								padding-bottom: 10px;
-								padding-top: 10px;
-								font-size: @h2-size;
-								background: @bg-color-4;
-								text-align: center;
-								width: 100%;
-								position: relative;
-								margin-bottom: 12px;
-							}
-						
-							.desc {
-								box-shadow: @z-2;
-								padding: 15px;
-								padding-top: 28px;
-								padding-bottom: 28x;
-								background: @bg-color-4;
-								text-align: center;
-								font-size: 16px;
-								width: 100%;
-							}
-						}
-					}
-					
-					.blog {
-						.title {
-							box-shadow: @z-2;
-							padding: 5px;
-							background: @bg-color-4;
-							text-align: center;
-							color: @main-color;
-							width: 25%;
-							font-size: @h2-size;
-							position: relative;
-							margin-bottom: 20px;
-							margin-left: auto;
-							margin-right: auto;
-						}
-						.event {
-							box-shadow: @z-2;
-							padding: 10px;
-							background: @bg-color-4;
-							text-align: center;
-							width: 68%;
-							position: relative;
-							margin-bottom: 20px;
-							margin-left: auto;
-							margin-right: auto;
-							
-							
-							.top {
-								color: @main-color;
-								font-size: 18px;
-								margin-bottom: 5px;
-								
-								.name {
-									text-align: left;
-									float: left;
-									width: 50%;
-								}
-								
-								.date {
-									text-align: right;
-									float: left;
-									width: 50%;
-								}
-							}
-							
-							.desc {
-								padding-left: 10px;
-								text-align: left;
-								color: @white-color;
-							}
-						}
-					}
-					
-					.resume {
-						color: @main-color;
-						margin-top: 30px;
-						text-align: center;
-						
-						.title {
-							color: @main-color;
-							margin-bottom: 5px;
-						}
-						
-						.icon {
-						font-size: 19px;
-							color: @white-color;
-						}
-					}
-			}
-		
-}
 }
 
 .clear {

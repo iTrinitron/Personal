@@ -45,17 +45,6 @@ body {
   margin-left: 10px;
   color: #ffffff;
 }
-.wrapper .footer {
-  background: #000000;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-  height: 40px;
-  min-width: 1380px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* this allows an absolute div to be full width -- http://stackoverflow.com/questions/6625116/css-position-absolute-full-width-problem */
-}
 .wrapper .navbar-container .navbar {
   width: 1380px;
   margin-left: auto;
@@ -427,6 +416,17 @@ body {
 .wrapper .container-container .container .resume .icon {
   font-size: 19px;
   color: #ffffff;
+}
+.footer {
+  background: #000000;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  height: 40px;
+  min-width: 1380px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* this allows an absolute div to be full width -- http://stackoverflow.com/questions/6625116/css-position-absolute-full-width-problem */
 }
 .clear {
   clear: both;
